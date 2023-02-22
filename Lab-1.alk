@@ -1,13 +1,24 @@
-x = 2;
-y = 3;
-z = 4;
-w = 5;
-a = 10;
-x += a; 
-y *= a;
-z /= a;
-w -= a;
-print(x); // 12
-print(y); // 30
-print(z); // 0
-print(w); // -5
+//Ex.3
+//Write an algorithm that generates the primes with Eratosthenes sieve
+getFirstPrime(n) {
+    for(i = 0;i <= n;i++ ) {
+        v[i] = 0;
+    }
+    v[0] =  1;
+    v[1] = 1;
+    for(i = 2; i*i <= n;i++){
+        if(v[i] == 0) {
+            for(j = 2;j <= n/i; j++) {
+                v[i*j] = 1;
+            }
+        }
+    }
+    for(i = 0;i <= n;i++ ) {
+        if(v[i]==0) print(i);
+    }
+}
+
+getFirstPrime(n);
+
+
+

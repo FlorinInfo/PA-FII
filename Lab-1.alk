@@ -31,9 +31,9 @@ generateFibo(n) {
         aux = y;
         y = x + y;
         x = aux;
-        if(y % 2 == 0) s=s+1;
+        if(y % 2 == 0) s=s+y;
         i = i + 1;
     }
     print(s);
 }
-// generateFibo(n);
+//generateFibo(n);

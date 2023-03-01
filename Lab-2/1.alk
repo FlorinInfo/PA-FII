@@ -1,0 +1,13 @@
+//input : a,b nr. naturale, a+b!=0
+//output: d nr.nat, max(d | {a%d==0 && b%d==0}); 
+
+cmmdc(a,b) {
+    if(a==0||b==0) return a+b;
+    while(a!=b) {
+        if(a > b) a = a-b;
+        else b = b-a;
+    }
+    return a;
+}
+
+print(cmmdc(a,b));
